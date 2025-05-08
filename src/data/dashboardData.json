@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Total User",
+    "value": "40,689",
+    "change": "8.5%",
+    "changeText": "Up from yesterday",
+    "changePositive": true,
+    "icon": "users",
+    "bgColor": "#e3e3ff"
+  },
+  {
+    "title": "Total Order",
+    "value": "10,293",
+    "change": "1.3%",
+    "changeText": "Up from past week",
+    "changePositive": true,
+    "icon": "box-open",
+    "bgColor": "#fff4d1"
+  },
+  {
+    "title": "Total Sales",
+    "value": "$89,000",
+    "change": "4.3%",
+    "changeText": "Down from yesterday",
+    "changePositive": false,
+    "icon": "chart-line",
+    "bgColor": "#dffcef"
+  },
+  {
+    "title": "Total Pending",
+    "value": "2040",
+    "change": "1.8%",
+    "changeText": "Up from yesterday",
+    "changePositive": true,
+    "icon": "clock-rotate-left",
+    "bgColor": "#ffe6dd"
+  }
+]
