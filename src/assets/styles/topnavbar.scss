@@ -1,0 +1,121 @@
+@import './variables.scss';
+
+.topnavbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: white;
+  height: 60px;
+
+  &_leftnavitems {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+
+    &_input {
+      position: relative;
+      display: inline-block;
+
+      &_style {
+        width: 300px;
+        height: 30px;
+        padding-left: 30px;
+        border-radius: 10px;
+        border: 1px solid whitesmoke;
+        background-color: #f5f6fa;
+      }
+
+      &_search {
+        position: absolute;
+        left: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &_rightnavitems {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &_notificationwrapper {
+      position: relative;
+      display: inline-block;
+
+      &_bell {
+        font-size: 24px;
+        color: #4880ff;
+        margin-top: 5px;
+      }
+
+      &_count {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        background: red;
+        color: white;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 50%;
+        font-weight: bold;
+        line-height: 1;
+      }
+    }
+
+    &_profile {
+      font-size: 20px;
+    }
+
+    &_userinfo {
+      display: flex;
+      flex-direction: column;
+      margin-left: 8px;
+
+      &_name {
+        font-weight: bold;
+        color: #404040;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.topnavbar_rightnavitems_settings {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 55px;
+  right: 12px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  width: 100px;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.select-language {
+  width: 120px;
+  height: 25px;
+}

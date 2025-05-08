@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+.sidebar {
+  width: $sidebar-width;
+  background-color: $bg-color;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  padding-top: 20px;
+
+  &_imagecontainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  &_list {
+    margin-top: 10px;
+
+    &_navitem {
+      padding: 5px;
+      color: $font-color;
+      cursor: pointer;
+      list-style: none;
+      width: 150px;
+      height: 35px;
+
+      &:hover {
+        background-color: lighten($primary-color, 10%);
+        border-radius: 5px;
+      }
+
+      &_icon {
+        margin-right: 10px;
+      }
+    }
+
+    &_header {
+      list-style: none;
+      color: var(--card-text-color);
+      margin-left: 15px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+::v-deep(.n-divider) {
+  border-top: 1px solid #ccc;
+  margin: 8px 0;
+}

@@ -1,0 +1,75 @@
+@import './variables.scss';
+
+.cardcontainer {
+  &_title {
+    color: var(--card-text-color);
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  &_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+    margin-top: 10px;
+  }
+
+  &_eachcard {
+    width: 280px;
+    height: 140px;
+    border-radius: 15px;
+    color: var(--card-text-color);
+  }
+
+  &_iconwrapper {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      font-size: 16px;
+      color: #444;
+    }
+  }
+
+  &_value {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--card-text-color);
+  }
+
+  &_footer {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--card-text-color);
+    display: flex;
+    align-items: center;
+
+    .up {
+      color: #16c784;
+    }
+
+    .down {
+      color: #f93e3e;
+    }
+
+    .change-text {
+      margin-left: 6px;
+      color: #777;
+    }
+
+    svg {
+      margin-right: 4px;
+    }
+  }
+}
+
+::v-deep(.n-card-header) {
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  color: var(--card-text-color);
+}
