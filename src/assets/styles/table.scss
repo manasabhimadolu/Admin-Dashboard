@@ -25,11 +25,11 @@
   color: var(--card-text-color);
 }
 
-// ::v-deep(.n-data-table) {
-//   border-radius: 10px;
-//   overflow: hidden;
-//   font-weight: 500;
-// }
+::v-deep(.n-data-table) {
+  border-radius: 10px;
+  overflow: hidden;
+  font-weight: 500;
+}
 
 ::v-deep(.n-data-table-th__title) {
   font-weight: 700;

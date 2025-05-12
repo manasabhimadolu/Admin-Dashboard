@@ -17,6 +17,16 @@
   &_list {
     margin-top: 10px;
 
+    &_wrapper {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &_navitem_label {
+        font-size: 14px;
+      }
+    }
+
     &_navitem {
       padding: 5px;
       color: $font-color;
@@ -29,17 +39,14 @@
         background-color: lighten($primary-color, 10%);
         border-radius: 5px;
       }
-
-      &_icon {
-        margin-right: 10px;
-      }
     }
 
     &_header {
       list-style: none;
       color: var(--card-text-color);
-      margin-left: 15px;
+      margin-left: 5px;
       margin-bottom: 10px;
+      font-size: 12px;
     }
   }
 }
