@@ -1,5 +1,5 @@
 <script setup>
-import Sidebar from './components/Sidebar.vue'
+import SideBar from './components/SideBar.vue'
 import TopNavbar from './components/TopNavbar.vue'
 import StatCard from './components/StatCard.vue'
 import SalesChart from './components/SalesChart.vue'
@@ -8,7 +8,7 @@ import Table from './components/Table.vue'
 
 <template>
   <div class="page-container">
-    <Sidebar />
+    <SideBar />
     <div class="layout">
       <TopNavbar />
       <div class="main-content">
