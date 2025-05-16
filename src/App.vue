@@ -1,10 +1,10 @@
 <script setup>
-import SideBar from './components/Sidebar.vue'
 import TopNavbar from './components/TopNavbar.vue'
 import StatCard from './components/StatCard.vue'
 import SalesChart from './components/SalesChart.vue'
 import Table from './components/Table.vue'
-import { ref, provide } from 'vue'
+import { ref, provide, onMounted } from 'vue'
+import SideBar from './components/SideBar.vue'
 
 const isCollapsed = ref(false)
 
