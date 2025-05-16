@@ -1,50 +1,85 @@
-@import './variables.scss';
+@use './variables' as *;
 
 .sidebar {
   width: $sidebar-width;
   background-color: $bg-color;
-  height: 100vh;
   left: 0;
   top: 0;
   padding-top: 20px;
+
+  &.isCollapsed {
+    width: 60px;
+    margin-top: 25px;
+
+    .sidebar_list {
+      &_wrapper {
+        justify-content: center;
+        padding: 10px 0;
+        margin: 0 auto;
+        width: fit-content;
+
+        &_navitem_icon {
+          margin: 0 auto;
+        }
+      }
+
+      &_navitem {
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        &:hover {
+          background-color: lighten($primary-color, 10%);
+          border-radius: 5px;
+        }
+      }
+    }
+  }
 
   &_imagecontainer {
     justify-content: center;
     align-items: center;
     display: flex;
+    padding: 0 8px;
+    margin-bottom: 20px;
   }
 
   &_list {
     margin-top: 10px;
+    padding: 0 10px;
 
     &_wrapper {
       display: flex;
       align-items: center;
       gap: 10px;
+      padding: 4px 8px;
 
       &_navitem_label {
         font-size: 14px;
       }
+
+      &_navitem_icon {
+        width: 20px;
+        text-align: center;
+      }
     }
 
     &_navitem {
-      padding: 5px;
       color: $font-color;
       cursor: pointer;
       list-style: none;
-      width: 150px;
-      height: 35px;
+      white-space: nowrap;
+      border-radius: 5px;
 
       &:hover {
         background-color: lighten($primary-color, 10%);
-        border-radius: 5px;
       }
     }
 
     &_header {
       list-style: none;
       color: var(--card-text-color);
-      margin-left: 5px;
+      margin-left: 15px;
       margin-bottom: 10px;
       font-size: 12px;
     }

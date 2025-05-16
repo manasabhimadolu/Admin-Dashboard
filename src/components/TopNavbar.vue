@@ -1,10 +1,11 @@
 <script setup>
-import FlagImage from '@/assets/images/Flag.png'
 import profileIcon from '@/assets/images/Profile.png'
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 
 const showDropdown = ref(false)
 const selectedCountry = ref('en')
+const isCollapsed = inject('isCollapsed')
+const toggleCollapse = inject('toggleCollapse')
 
 const toggleDropdown = () => {
   showDropdown.value = !showDropdown.value
@@ -28,7 +29,13 @@ const countryOptions = ref([
 <template>
   <div class="topnavbar">
     <div class="topnavbar_leftnavitems">
-      <font-awesome-icon :icon="['fas', 'bars']" />
+      <div class="topnavbar_leftnavitems_iconwrapper" :class="{ isCollapsed: isCollapsed }">
+        <font-awesome-icon
+          :icon="['fas', 'bars']"
+          @click="toggleCollapse"
+          class="topnavbar_leftnavitems_icon"
+        />
+      </div>
       <div class="topnavbar_leftnavitems_input">
         <font-awesome-icon
           :icon="['fas', 'magnifying-glass']"
@@ -45,7 +52,6 @@ const countryOptions = ref([
         />
         <span class="topnavbar_rightnavitems_notificationwrapper_count">5</span>
       </div>
-      <!-- <img :src="FlagImage" alt="Flag" /> -->
       <n-select
         class="select-language"
         v-model:value="selectedCountry"
@@ -74,7 +80,3 @@ const countryOptions = ref([
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-@import '@/assets/styles/topnavbar';
-</style>

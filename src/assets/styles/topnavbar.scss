@@ -1,4 +1,4 @@
-@import './variables.scss';
+@use './variables' as *;
 
 .topnavbar {
   display: flex;
@@ -12,6 +12,22 @@
     gap: 10px;
     justify-content: center;
     align-items: center;
+
+    &_iconwrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+
+      &.isCollapsed {
+        margin-left: -60px;
+      }
+    }
+
+    &_icon {
+      cursor: pointer;
+    }
 
     &_input {
       position: relative;

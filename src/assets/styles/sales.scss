@@ -1,18 +1,17 @@
-@import './variables.scss';
+@use './variables' as *;
 
 .saleschartcontainer {
   margin-top: 15px;
   background: #fff;
-  padding: 15px;
-  width: 100%;
+  padding: 0px 15px;
   height: 250px;
   border-radius: 15px;
 
   &_header {
     display: flex;
-    justify-content: space-between; /* spacing */
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    height: 50px;
 
     &_title {
       color: var(--card-text-color);
@@ -22,6 +21,6 @@
   }
 
   &_content {
-    margin-top: 10px;
+    height: 200px;
   }
 }
