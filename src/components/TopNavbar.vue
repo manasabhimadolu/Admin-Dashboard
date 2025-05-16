@@ -30,26 +30,20 @@ const countryOptions = ref([
   <div class="topnavbar">
     <div class="topnavbar_leftnavitems">
       <div class="topnavbar_leftnavitems_iconwrapper" :class="{ isCollapsed: isCollapsed }">
-        <font-awesome-icon
-          :icon="['fas', 'bars']"
+        <i
+          class="pi pi-bars topnavbar_leftnavitems_icon"
           @click="toggleCollapse"
-          class="topnavbar_leftnavitems_icon"
-        />
+          style="cursor: pointer"
+        ></i>
       </div>
       <div class="topnavbar_leftnavitems_input">
-        <font-awesome-icon
-          :icon="['fas', 'magnifying-glass']"
-          class="topnavbar_leftnavitems_input_search"
-        />
+        <i class="pi pi-search topnavbar_leftnavitems_input_search"></i>
         <input class="topnavbar_leftnavitems_input_style" type="text" placeholder="Search" />
       </div>
     </div>
     <div class="topnavbar_rightnavitems">
       <div class="topnavbar_rightnavitems_notificationwrapper">
-        <font-awesome-icon
-          :icon="['fas', 'bell']"
-          class="topnavbar_rightnavitems_notificationwrapper_bell"
-        />
+        <i class="pi pi-bell topnavbar_rightnavitems_notificationwrapper_bell"></i>
         <span class="topnavbar_rightnavitems_notificationwrapper_count">5</span>
       </div>
       <n-select
@@ -66,11 +60,11 @@ const countryOptions = ref([
         <div class="topnavbar_rightnavitems_userinfo_name">Manasa Bhimadolu</div>
         <div style="color: #565656; font-size: 12px">(Admin)</div>
       </div>
-      <font-awesome-icon
-        :icon="['fas', 'circle-chevron-down']"
-        class="topnavbar_rightnavitems_settings"
+      <i
+        class="pi pi-chevron-down topnavbar_rightnavitems_settings"
         @click="toggleDropdown"
-      />
+        style="cursor: pointer"
+      ></i>
       <div v-if="showDropdown" class="dropdown-menu">
         <ul>
           <li @click="goToProfile">Profile</li>

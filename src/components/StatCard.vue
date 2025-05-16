@@ -25,7 +25,7 @@ onMounted(() => {
       >
         <template #header-extra>
           <div class="cardcontainer_iconwrapper" :style="{ backgroundColor: card.bgColor }">
-            <font-awesome-icon :icon="['fas', card.icon]" />
+            <i :class="card.icon" style="font-size: 1.5rem; color: inherit"></i>
           </div>
         </template>
 
@@ -33,10 +33,7 @@ onMounted(() => {
 
         <template #footer>
           <div class="cardcontainer_footer">
-            <font-awesome-icon
-              :icon="['fas', card.changePositive ? 'arrow-up' : 'arrow-down']"
-              :class="card.changePositive ? 'up' : 'down'"
-            />
+            <i :class="[card.changePositive ? 'pi pi-arrow-up up' : 'pi pi-arrow-down down']"></i>
             <span :class="card.changePositive ? 'up' : 'down'">{{ card.change }}</span>
             <span class="change-text">{{ card.changeText }}</span>
           </div>
