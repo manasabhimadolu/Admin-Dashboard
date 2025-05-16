@@ -2,15 +2,11 @@
   <div class="dealscontainer">
     <div class="dealscontainer_header">
       <h2 class="dealscontainer_header_title">Deals Details</h2>
-      <n-select
-        v-model:value="selectedMonth"
-        :options="monthOptions"
-        style="width: 120px"
-        class="dealscontainer_header_monthselecter"
-      />
+      <n-select v-model:value="selectedMonth" :options="monthOptions" style="width: 120px" />
     </div>
-
-    <n-data-table :columns="columns" :data="tableData" :pagination="false" :bordered="false" />
+    <div class="dealscontainer_content">
+      <n-data-table :columns="columns" :data="tableData" :pagination="false" :bordered="false" />
+    </div>
   </div>
 </template>
 
@@ -103,8 +99,3 @@ const columns = [
   },
 ]
 </script>
-
-<style lang="scss" scoped>
-@import '@/assets/styles/variables';
-@import '@/assets/styles/table';
-</style>

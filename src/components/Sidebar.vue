@@ -1,5 +1,8 @@
 <script setup>
+import { inject } from 'vue'
 import LogoImage from '@/assets/images/DashStack.png'
+
+const isCollapsed = inject('isCollapsed')
 
 const menuItems = [
   { label: 'Dashboard', icon: ['fas', 'store'] },
@@ -25,26 +28,25 @@ const menuItems = [
 </script>
 
 <template>
-  <div class="sidebar">
+  <div :class="['sidebar', { isCollapsed: isCollapsed }]">
     <div class="sidebar_imagecontainer">
-      <img :src="LogoImage" alt="Dashboard" />
+      <img :src="LogoImage" alt="Dashboard" v-if="!isCollapsed" />
     </div>
     <ul class="sidebar_list">
       <template v-for="(item, index) in menuItems" :key="index">
-        <n-divider v-if="item.divider" />
-        <li v-else-if="item.header" class="sidebar_list_header">{{ item.header }}</li>
+        <n-divider v-if="item.divider" v-show="!isCollapsed" />
+        <li v-else-if="item.header" class="sidebar_list_header" v-show="!isCollapsed">
+          {{ item.header }}
+        </li>
         <li v-else class="sidebar_list_navitem">
           <div class="sidebar_list_wrapper">
             <font-awesome-icon class="sidebar_list_wrapper_navitem_icon" :icon="item.icon" />
-            <span class="sidebar_list_wrapper_navitem_label">{{ item.label }}</span>
+            <span class="sidebar_list_wrapper_navitem_label" v-show="!isCollapsed">{{
+              item.label
+            }}</span>
           </div>
         </li>
       </template>
     </ul>
   </div>
 </template>
-
-<style lang="scss" scoped>
-@import '@/assets/styles/variables';
-@import '@/assets/styles/sidebar';
-</style>

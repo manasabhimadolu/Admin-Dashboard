@@ -1,4 +1,11 @@
-@import './variables';
-@import './sidebar';
-@import './topnavbar.scss';
-@import './card';
+@use './variables' as *;
+@use './sidebar' as *;
+@use './topnavbar' as *;
+@use './card' as *;
+@use './sales' as *;
+@use './table' as *;
+@use './global' as *;
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}

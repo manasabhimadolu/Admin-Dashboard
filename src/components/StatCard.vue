@@ -1,7 +1,9 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, inject } from 'vue'
 import { NCard } from 'naive-ui'
-import dashboardData from '../../src/data/dashboardData.json'
+import dashboardData from '../assets/data/dashboardData.json'
+
+const isCollapsed = inject('isCollapsed')
 
 const cards = ref([])
 
@@ -13,7 +15,7 @@ onMounted(() => {
 <template>
   <div class="cardcontainer">
     <h3 class="cardcontainer_title">Dashboard</h3>
-    <div class="cardcontainer_cards">
+    <div :class="['cardcontainer_cards', { isCollapsed: isCollapsed }]">
       <n-card
         v-for="(card, index) in cards"
         :key="index"
@@ -43,8 +45,3 @@ onMounted(() => {
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-@import '@/assets/styles/variables';
-@import '@/assets/styles/card';
-</style>
