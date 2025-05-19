@@ -19,18 +19,22 @@
   }
 }
 
-::v-deep(.n-data-table .n-data-table-thead th) {
+.n-data-table .n-data-table-thead th {
   background-color: #f1f4f9;
   color: var(--card-text-color);
 }
 
-::v-deep(.n-data-table) {
+.n-data-table {
   border-radius: 10px;
   overflow: hidden;
   font-weight: 500;
 }
 
-::v-deep(.n-data-table-th__title) {
+.n-data-table-th__title {
   font-weight: 700;
   color: var(--card-text-color);
+}
+
+.n-data-table-th__title {
+  width: 132px;
 }
